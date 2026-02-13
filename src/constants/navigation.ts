@@ -15,16 +15,16 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const CONTACT_INFO: ContactInfo = {
-  phone: "+260 211 123 456",
-  email: "info@bisl.zm",
+  phone: "+260976219920",
+  email: "danny.phiri@broadimagessolutions.com",
   address: "Lusaka, Zambia",
 };
 
 export const COMPANY_INFO = {
-  name: "BISL",
-  fullName: "BISL Solutions",
-  tagline: "Solutions",
-  founded: 2014,
-  projectsDelivered: 500,
-  trustStatement: "Trusted Since 2014 • 500+ Projects Delivered",
+  name: "Broad Image Solutions Limited",
+  fullName: "Broad Image Solutions",
+  tagline: "THINK IT, DELIVER IT",
+  founded: 2016,
+  projectsDelivered: 100,
+  trustStatement: "Trusted Since 2016 • 100+ Projects Delivered",
 };
