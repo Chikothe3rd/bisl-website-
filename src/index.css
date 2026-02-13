@@ -121,7 +121,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', 'Inter', sans-serif;
-    @apply font-semibold tracking-tight;
+    @apply font-semibold tracking-tight text-center sm:text-left;
   }
 }
 

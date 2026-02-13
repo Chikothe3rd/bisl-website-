@@ -22,11 +22,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container relative z-10 max-w-5xl">
-        <div>
+        <div className="text-center sm:text-left">
           <HeroBadge />
 
-          {/* Headline */}
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-display font-bold text-foreground leading-[1.1] mb-6 sm:mb-8 lg:mb-10 animate-fade-in animation-delay-100 text-balance">
+          {/* Headline - Responsive alignment: center on mobile, left on desktop */}
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-display font-bold text-foreground leading-[1.1] mb-6 sm:mb-8 lg:mb-10 animate-fade-in animation-delay-100 text-balance max-w-3xl">
             {HERO_CONFIG.headline.split(" ").slice(0, 4).join(" ")}{" "}
             <span className="gradient-text-accent">
               {HERO_CONFIG.headline.split(" ").slice(4).join(" ")}
