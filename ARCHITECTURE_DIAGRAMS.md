@@ -21,6 +21,7 @@
 ## 🧩 Component Composition
 
 ### Header Component Structure
+
 ```
 Header (Main)
 ├── HeaderLogo
@@ -36,6 +37,7 @@ Header (Main)
 ```
 
 ### Hero Component Structure
+
 ```
 Hero (Main)
 ├── HeroBackground
@@ -58,6 +60,7 @@ Hero (Main)
 ## 🎯 Data Flow
 
 ### Component State Flow
+
 ```
 Component
     ↓
@@ -73,6 +76,7 @@ Re-render
 ```
 
 ### Configuration Flow
+
 ```
 Constants (navigation.ts, hero.ts)
     ↓
@@ -248,6 +252,7 @@ import { useMobileMenu } from "@/hooks/useMobileMenu"
 ## 🔀 State Management Flow
 
 ### Scroll State Flow
+
 ```
 Window Scroll Event
         ↓
@@ -264,6 +269,7 @@ UI updates (e.g., header style changes)
 ```
 
 ### Mobile Menu State Flow
+
 ```
 User clicks menu button
         ↓
@@ -296,21 +302,21 @@ All go through barrel exports (index.ts)
 
 ## 🎨 Component Responsibility Matrix
 
-| Component | Responsibility | State | Props |
-|-----------|---------------|-------|-------|
-| Header | Render header layout | useScroll, useMobileMenu | - |
-| HeaderLogo | Display logo | - | to?: string |
-| HeaderNav | Display nav links | - | - |
-| HeaderCTA | Display CTA | - | - |
-| MobileMenuButton | Toggle button | - | isOpen, onToggle |
-| MobileMenu | Mobile nav | - | isOpen, onClose |
-| Hero | Render hero section | - | - |
-| HeroBadge | Display badge | - | - |
-| HeroCTA | Display buttons | - | - |
-| HeroFeatures | Display features | - | features: Feature[] |
-| HeroStats | Display stats | - | - |
-| HeroBackground | Display background | - | - |
-| ScrollIndicator | Show scroll hint | - | - |
+| Component        | Responsibility       | State                    | Props               |
+| ---------------- | -------------------- | ------------------------ | ------------------- |
+| Header           | Render header layout | useScroll, useMobileMenu | -                   |
+| HeaderLogo       | Display logo         | -                        | to?: string         |
+| HeaderNav        | Display nav links    | -                        | -                   |
+| HeaderCTA        | Display CTA          | -                        | -                   |
+| MobileMenuButton | Toggle button        | -                        | isOpen, onToggle    |
+| MobileMenu       | Mobile nav           | -                        | isOpen, onClose     |
+| Hero             | Render hero section  | -                        | -                   |
+| HeroBadge        | Display badge        | -                        | -                   |
+| HeroCTA          | Display buttons      | -                        | -                   |
+| HeroFeatures     | Display features     | -                        | features: Feature[] |
+| HeroStats        | Display stats        | -                        | -                   |
+| HeroBackground   | Display background   | -                        | -                   |
+| ScrollIndicator  | Show scroll hint     | -                        | -                   |
 
 ## 📊 File Count Summary
 
@@ -442,6 +448,7 @@ DEVELOPER_GUIDE.md
 ---
 
 This visual representation helps you understand:
+
 - 🎯 How code is organized
 - 🔄 How data flows
 - 📦 How components relate
