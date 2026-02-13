@@ -55,7 +55,7 @@ const Features = () => {
 
       <div className="container relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20">
+        <div className="max-w-3xl mb-12 sm:mb-16 lg:mb-20">
           <span className="inline-flex items-center gap-2 text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest mb-6">
             <span className="w-6 sm:w-8 h-px bg-accent" aria-hidden="true" />
             Why Choose Us

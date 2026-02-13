@@ -121,7 +121,26 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', 'Inter', sans-serif;
-    @apply font-semibold tracking-tight text-center sm:text-left;
+    @apply font-semibold tracking-tight;
+  }
+
+  /* Improved line spacing for better readability */
+  h1, h2 {
+    @apply leading-snug;
+  }
+
+  h3, h4 {
+    @apply leading-normal;
+  }
+
+  /* Ensure proper word wrapping in paragraphs */
+  p {
+    @apply break-words overflow-wrap break-word;
+  }
+
+  /* Prevent orphaned words in headings */
+  h1, h2, h3, h4, h5, h6 {
+    hyphens: auto;
   }
 }
 
@@ -158,13 +177,13 @@
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
-  /* Section padding - responsive */
+  /* Section padding - responsive with better vertical rhythm */
   .section-padding {
-    @apply py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32;
+    @apply py-16 sm:py-20 md:py-28 lg:py-32 xl:py-40;
   }
 
   .section-padding-sm {
-    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
   }
 
   /* Container max width for content */
