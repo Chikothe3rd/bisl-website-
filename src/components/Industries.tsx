@@ -36,7 +36,7 @@ const Industries = () => {
 
       <div className="container relative">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="max-w-3xl mb-20">
           <span className="inline-flex items-center gap-2 text-accent font-semibold text-sm uppercase tracking-widest mb-6">
             <span className="w-8 h-px bg-accent" />
             Industries We Serve

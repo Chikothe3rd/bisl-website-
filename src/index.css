@@ -135,7 +135,7 @@
 
   /* Ensure proper word wrapping in paragraphs */
   p {
-    @apply break-words overflow-wrap break-word;
+    @apply break-words;
   }
 
   /* Prevent orphaned words in headings */
