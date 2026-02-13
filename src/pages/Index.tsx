@@ -1,16 +1,11 @@
-import Header from "@/components/Header";
+import { AppLayout } from "@/components/layouts";
 import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main id="main-content">
-        <Hero />
-      </main>
-      <Footer />
-    </div>
+    <AppLayout>
+      <Hero />
+    </AppLayout>
   );
 };
 
