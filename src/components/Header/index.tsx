@@ -1,7 +1,8 @@
 /**
  * Header component (refactored)
  * Main header with composed subcomponents
- * Mobile-responsive with skip link and proper ARIA labels
+ * Mobile-responsive with skip link, proper ARIA labels, and smooth animations
+ * Features: Smooth transitions, overlay, click-outside close, Escape key close
  */
 
 import { useScroll, useMobileMenu } from "@/hooks";
@@ -13,7 +14,7 @@ import { MobileMenu } from "./MobileMenu";
 
 const Header = () => {
   const { isScrolled } = useScroll();
-  const { isOpen, toggle, close } = useMobileMenu();
+  const { isOpen, toggle, close, menuRef } = useMobileMenu();
 
   return (
     <>
@@ -29,7 +30,7 @@ const Header = () => {
             : "bg-background/20 backdrop-blur-md border-b border-border/20 py-3 sm:py-5"
         }`}
         role="banner"
-        aria-label="Main navigation"
+        aria-label="Site header"
       >
         <div className="container flex items-center justify-between gap-2 sm:gap-4">
           <HeaderLogo />
@@ -38,7 +39,7 @@ const Header = () => {
           <MobileMenuButton isOpen={isOpen} onToggle={toggle} />
         </div>
 
-        <MobileMenu isOpen={isOpen} onClose={close} />
+        <MobileMenu isOpen={isOpen} onClose={close} menuRef={menuRef} />
       </header>
     </>
   );

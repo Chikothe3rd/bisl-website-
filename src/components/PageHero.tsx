@@ -37,10 +37,10 @@ const PageHero = ({ title, subtitle, currentLabel }: PageHeroProps) => {
         </Breadcrumb>
 
         <div className="mt-6 max-w-3xl">
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
             {title}
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl text-balance">
+          <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
             {subtitle}
           </p>
         </div>

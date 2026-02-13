@@ -42,12 +42,11 @@ const Industries = () => {
             Industries We Serve
             <span className="w-8 h-px bg-accent" />
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-primary-foreground mb-6 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-primary-foreground mb-6">
             Trusted Across Key Sectors
           </h2>
           <p className="text-lg text-primary-foreground/70 leading-relaxed">
-            We understand the unique challenges of each industry and deliver specialized 
-            solutions that meet regulatory requirements and operational needs.
+            We understand the unique challenges of each industry and deliver specialized solutions that meet regulatory requirements and operational needs.
           </p>
         </div>
 

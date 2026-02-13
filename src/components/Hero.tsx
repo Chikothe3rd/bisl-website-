@@ -47,9 +47,8 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl animate-fade-in animation-delay-200 text-balance">
-            From structured cabling to predictive analytics, BISL delivers enterprise-grade 
-            technology solutions that power growth across Zambia's leading organizations.
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-10 max-w-3xl animate-fade-in animation-delay-200">
+            From structured cabling to predictive analytics, BISL delivers enterprise-grade technology solutions that power growth across Zambia's leading organizations.
           </p>
 
           {/* CTAs */}

@@ -42,12 +42,11 @@ const Projects = () => {
             Case Highlights
             <span className="w-8 h-px bg-accent" />
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-6 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-6">
             Projects That Make an Impact
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Explore how we've helped organizations across Zambia transform their operations 
-            with innovative, tailored technology solutions.
+            Explore how we've helped organizations across Zambia transform their operations with innovative, tailored technology solutions.
           </p>
         </div>
 

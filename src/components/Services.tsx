@@ -71,12 +71,11 @@ const Services = () => {
             Our Services
             <span className="w-8 h-px bg-accent" />
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-6 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-6">
             End-to-End Technology Solutions for Modern Enterprises
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            From infrastructure to intelligence, we deliver comprehensive IT services 
-            that drive operational efficiency and business growth.
+            From infrastructure to intelligence, we deliver comprehensive IT services that drive operational efficiency and business growth.
           </p>
         </div>
 

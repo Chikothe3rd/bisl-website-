@@ -133,12 +133,11 @@ const Contact = () => {
             Contact Us
             <span className="w-8 h-px bg-accent" />
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-6 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-6">
             Let's Build Something Great Together
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Ready to transform your business with innovative IT solutions? 
-            Get in touch with our team for a free consultation.
+            Ready to transform your business with innovative IT solutions? Get in touch with our team for a free consultation.
           </p>
         </div>
 

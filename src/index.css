@@ -136,11 +136,22 @@
   /* Ensure proper word wrapping in paragraphs */
   p {
     @apply break-words;
+    word-wrap: break-word;
+    word-break: break-word;
   }
 
   /* Prevent orphaned words in headings */
   h1, h2, h3, h4, h5, h6 {
     hyphens: auto;
+  }
+
+  /* Improved paragraph spacing for better flow */
+  p {
+    @apply mb-6;
+  }
+
+  p:last-child {
+    @apply mb-0;
   }
 }
 
@@ -252,17 +263,11 @@
   .transition-delay-200 { transition-delay: 200ms; }
   .transition-delay-300 { transition-delay: 300ms; }
 
-  /* Text balance for better typography */
+  /* Text balance for better typography - improved for horizontal flow */
   .text-balance {
-    word-spacing: 9999px;
-    /* fallback for browsers that don't support text-wrap:balance */
-    hyphens: auto;
-  }
-
-  @supports (text-wrap: balance) {
-    .text-balance {
-      text-wrap: balance;
-    }
+    word-spacing: normal;
+    /* Modern browsers: balance text across lines */
+    text-wrap: balance;
   }
 
   /* Responsive text sizing */
@@ -296,6 +301,48 @@
 
   .prevent-fouc.loaded {
     visibility: visible;
+  }
+
+  /* Mobile menu animations */
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideOutUp {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes fadeInOverlay {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Mobile menu link animations */
+  .menu-item {
+    animation: slideInUp 0.3s ease-out forwards;
+  }
+
+  /* Smooth backdrop blur transition */
+  .backdrop-blur-transition {
+    transition: backdrop-filter 0.3s ease-out;
   }
 }
 

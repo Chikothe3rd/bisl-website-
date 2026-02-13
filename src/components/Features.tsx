@@ -61,12 +61,11 @@ const Features = () => {
             Why Choose Us
             <span className="w-6 sm:w-8 h-px bg-accent" aria-hidden="true" />
           </span>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-sm font-bold text-foreground mb-4 sm:mb-6 text-balance">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-display-sm font-bold text-foreground mb-4 sm:mb-6">
             The BISL Advantage
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            We combine technical excellence with exceptional service to deliver 
-            results that consistently exceed expectations.
+            We combine technical excellence with exceptional service to deliver results that consistently exceed expectations.
           </p>
         </div>
 
