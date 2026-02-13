@@ -128,12 +128,11 @@ const Footer = () => {
               className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 focus-ring rounded-lg"
               aria-label="BISL Solutions - Home"
             >
-              <div className="relative w-9 sm:w-11 h-9 sm:h-11">
-                <div className="absolute inset-0 bg-accent rounded-lg sm:rounded-xl rotate-6" aria-hidden="true" />
-                <div className="absolute inset-0 bg-primary-foreground rounded-lg sm:rounded-xl flex items-center justify-center">
-                  <span className="text-primary font-display font-bold text-lg sm:text-xl">B</span>
-                </div>
-              </div>
+              <img 
+                src="/BroadMlogo.png" 
+                alt="BISL Logo" 
+                className="w-9 sm:w-11 h-9 sm:h-11 object-contain"
+              />
               <div className="flex flex-col">
                 <span className="font-display font-bold text-base sm:text-lg">BISL</span>
                 <span className="text-[9px] sm:text-[10px] text-primary-foreground/60 font-medium uppercase tracking-wider">Solutions</span>
