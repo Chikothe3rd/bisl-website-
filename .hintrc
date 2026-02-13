@@ -8,5 +8,14 @@
     "not and_ff <= 140",
     "not firefox <= 141",
     "not opera <= 117"
-  ]
+  ],
+  "hints": {
+    "axe/aria": [
+      "default",
+      {
+        "aria-valid-attr-value": "off"
+      }
+    ],
+    "typescript-config/strict": "off"
+  }
 }

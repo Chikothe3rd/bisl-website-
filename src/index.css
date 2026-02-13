@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* BISL Design System - Premium 2025 Tech Company */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -179,6 +180,14 @@
 
   /* Text balance for better typography */
   .text-balance {
-    text-wrap: balance;
+    word-spacing: 9999px;
+    /* fallback for browsers that don't support text-wrap:balance */
+    hyphens: auto;
+  }
+
+  @supports (text-wrap: balance) {
+    .text-balance {
+      text-wrap: balance;
+    }
   }
 }

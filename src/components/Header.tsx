@@ -83,10 +83,11 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             className="lg:hidden p-2.5 rounded-xl bg-muted/50 hover:bg-muted focus-ring"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMobileMenuOpen}
+            aria-expanded={isMobileMenuOpen ? "true" : "false"}
           >
             {isMobileMenuOpen ? (
               <X className="w-5 h-5" />
