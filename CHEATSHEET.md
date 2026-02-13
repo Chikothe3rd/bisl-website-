@@ -3,6 +3,7 @@
 ## Import Patterns
 
 ### ✅ Correct
+
 ```typescript
 import { useScroll, useMobileMenu } from "@/hooks";
 import { NAV_LINKS, CONTACT_INFO } from "@/constants";
@@ -12,9 +13,10 @@ import type { NavLink, Feature } from "@/types";
 ```
 
 ### ❌ Wrong
+
 ```typescript
-import { useScroll } from "@/hooks/useScroll";  // ❌ Use barrel export
-import { NAV_LINKS } from "@/constants/navigation";  // ❌ Use barrel export
+import { useScroll } from "@/hooks/useScroll"; // ❌ Use barrel export
+import { NAV_LINKS } from "@/constants/navigation"; // ❌ Use barrel export
 ```
 
 ---
@@ -22,6 +24,7 @@ import { NAV_LINKS } from "@/constants/navigation";  // ❌ Use barrel export
 ## Hooks Reference
 
 ### useScroll()
+
 ```typescript
 const { isScrolled, scrollY } = useScroll({ threshold: 10 });
 // isScrolled: boolean
@@ -29,6 +32,7 @@ const { isScrolled, scrollY } = useScroll({ threshold: 10 });
 ```
 
 ### useMobileMenu()
+
 ```typescript
 const { isOpen, toggle, open, close } = useMobileMenu();
 // isOpen: boolean
@@ -42,19 +46,21 @@ const { isOpen, toggle, open, close } = useMobileMenu();
 ## Services Reference
 
 ### scroll.ts
+
 ```typescript
-isScrolled(threshold)           // Check if scrolled past threshold
-addScrollListener(callback)     // Add scroll event listener
-scrollToElement(id, offset)     // Scroll to element
-scrollToTop(behavior)           // Scroll to top
+isScrolled(threshold); // Check if scrolled past threshold
+addScrollListener(callback); // Add scroll event listener
+scrollToElement(id, offset); // Scroll to element
+scrollToTop(behavior); // Scroll to top
 ```
 
 ### routing.ts
+
 ```typescript
-navigateTo(path)                // Navigate to page
-normalizeRoute(route)           // Normalize route path
-isInternalLink(href)            // Check if internal link
-getActiveRoute(path, route)     // Check if route is active
+navigateTo(path); // Navigate to page
+normalizeRoute(route); // Normalize route path
+isInternalLink(href); // Check if internal link
+getActiveRoute(path, route); // Check if route is active
 ```
 
 ---
@@ -62,6 +68,7 @@ getActiveRoute(path, route)     // Check if route is active
 ## Constants Reference
 
 ### navigation.ts
+
 ```typescript
 NAV_LINKS[]         // Navigation links array
 CONTACT_INFO        // Contact information
@@ -69,6 +76,7 @@ COMPANY_INFO        // Company details
 ```
 
 ### hero.ts
+
 ```typescript
 HERO_CONFIG         // Hero section configuration
 HERO_FEATURES[]     // Feature list
@@ -79,11 +87,11 @@ HERO_FEATURES[]     // Feature list
 ## Types Reference
 
 ```typescript
-NavLink             // { to: string; label: string }
-Feature             // { icon: Component; text: string }
-HeroConfig          // Hero configuration type
-ContactInfo         // { phone: string; ... }
-PageConfig          // Page configuration type
+NavLink; // { to: string; label: string }
+Feature; // { icon: Component; text: string }
+HeroConfig; // Hero configuration type
+ContactInfo; // { phone: string; ... }
+PageConfig; // Page configuration type
 ```
 
 ---
@@ -91,6 +99,7 @@ PageConfig          // Page configuration type
 ## Layout Usage
 
 ### AppLayout (Full Page)
+
 ```typescript
 import { AppLayout } from "@/components/layouts";
 
@@ -101,6 +110,7 @@ import { AppLayout } from "@/components/layouts";
 ```
 
 ### PageLayout (Content Only)
+
 ```typescript
 import { PageLayout } from "@/components/layouts";
 
@@ -115,6 +125,7 @@ import { PageLayout } from "@/components/layouts";
 ## Component Patterns
 
 ### Simple Component
+
 ```typescript
 interface MyComponentProps {
   title: string;
@@ -130,11 +141,12 @@ export const MyComponent: React.FC<MyComponentProps> = ({
 ```
 
 ### Component with Hooks
+
 ```typescript
 export const MyComponent = () => {
   const { isScrolled } = useScroll();
   const { isOpen, toggle } = useMobileMenu();
-  
+
   return (
     <div>
       {isScrolled && <BackToTop />}
@@ -145,6 +157,7 @@ export const MyComponent = () => {
 ```
 
 ### Component with Constants
+
 ```typescript
 import { NAV_LINKS } from "@/constants";
 
@@ -162,43 +175,46 @@ export const Navigation = () => (
 ## Hook Patterns
 
 ### Basic Hook
+
 ```typescript
 export const useMyHook = () => {
   const [state, setState] = useState(false);
-  
+
   return { state, setState };
 };
 ```
 
 ### Hook with Effect
+
 ```typescript
 export const useMyHook = () => {
   const [data, setData] = useState(null);
-  
+
   useEffect(() => {
     // Setup
     return () => {
       // Cleanup
     };
   }, []);
-  
+
   return { data };
 };
 ```
 
 ### Hook with Service
+
 ```typescript
 export const useMyHook = () => {
   const [data, setData] = useState(null);
-  
+
   useEffect(() => {
     const unsubscribe = addScrollListener((isScrolled) => {
       setData(isScrolled);
     });
-    
+
     return unsubscribe;
   }, []);
-  
+
   return { data };
 };
 ```
@@ -208,6 +224,7 @@ export const useMyHook = () => {
 ## File Structure Template
 
 ### New Component
+
 ```
 components/
 └── MyComponent/
@@ -218,6 +235,7 @@ components/
 ```
 
 ### New Feature
+
 ```
 // 1. Create constant if needed
 constants/myFeature.ts
@@ -245,6 +263,7 @@ services/index.ts
 ## Testing Quick Reference
 
 ### Test a Service
+
 ```typescript
 import { isScrolled } from "@/services";
 
@@ -255,6 +274,7 @@ test("detects scroll", () => {
 ```
 
 ### Test a Hook
+
 ```typescript
 import { renderHook } from "@testing-library/react";
 import { useScroll } from "@/hooks";
@@ -266,6 +286,7 @@ test("returns scroll state", () => {
 ```
 
 ### Test a Component
+
 ```typescript
 import { render, screen } from "@testing-library/react";
 import { HeaderLogo } from "@/components/Header/HeaderLogo";
@@ -281,6 +302,7 @@ test("renders logo", () => {
 ## Performance Tips
 
 ### Memoize Components
+
 ```typescript
 import { memo } from "react";
 
@@ -290,6 +312,7 @@ export const MyComponent = memo(({ prop }) => {
 ```
 
 ### Memoize Callbacks
+
 ```typescript
 const handleClick = useCallback(() => {
   // Handle click
@@ -297,6 +320,7 @@ const handleClick = useCallback(() => {
 ```
 
 ### Lazy Load Components
+
 ```typescript
 import { lazy, Suspense } from "react";
 
@@ -312,13 +336,15 @@ const Hero = lazy(() => import("@/components/Hero"));
 ## Common Mistakes to Avoid
 
 ### ❌ Hardcoding Values
+
 ```typescript
 const navLinks = [
-  { to: "/about", label: "About" },  // ❌ Use constants instead
+  { to: "/about", label: "About" }, // ❌ Use constants instead
 ];
 ```
 
 ### ✅ Use Constants
+
 ```typescript
 import { NAV_LINKS } from "@/constants";
 // Use NAV_LINKS
@@ -327,6 +353,7 @@ import { NAV_LINKS } from "@/constants";
 ---
 
 ### ❌ Mixing Logic and UI
+
 ```typescript
 const MyComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -336,6 +363,7 @@ const MyComponent = () => {
 ```
 
 ### ✅ Extract Logic
+
 ```typescript
 // Use hook or service
 const { isOpen, toggle } = useMobileMenu();
@@ -345,18 +373,21 @@ return <div onClick={toggle}>Toggle</div>;
 ---
 
 ### ❌ Long Import Paths
+
 ```typescript
-import { useScroll } from "@/hooks/useScroll";  // ❌
+import { useScroll } from "@/hooks/useScroll"; // ❌
 ```
 
 ### ✅ Use Barrel Exports
+
 ```typescript
-import { useScroll } from "@/hooks";  // ✅
+import { useScroll } from "@/hooks"; // ✅
 ```
 
 ---
 
 ### ❌ No Type Safety
+
 ```typescript
 const MyComponent = ({ data }) => {
   // What is data?
@@ -365,6 +396,7 @@ const MyComponent = ({ data }) => {
 ```
 
 ### ✅ Add Types
+
 ```typescript
 interface MyComponentProps {
   data: string;
@@ -409,20 +441,21 @@ cd src/types                # Type definitions
 
 ## Documentation Links
 
-| Document | Purpose | When to Read |
-|----------|---------|--------------|
-| **ARCHITECTURE.md** | Deep technical guide | Planning architecture |
-| **DEVELOPER_GUIDE.md** | How to use patterns | Learning patterns |
-| **REFACTORING_SUMMARY.md** | What changed | Onboarding |
-| **REFACTORING_INDEX.md** | Overview | Quick overview |
-| **ARCHITECTURE_DIAGRAMS.md** | Visual reference | Understanding flow |
-| **CHEATSHEET.md** | Quick reference | While coding |
+| Document                     | Purpose              | When to Read          |
+| ---------------------------- | -------------------- | --------------------- |
+| **ARCHITECTURE.md**          | Deep technical guide | Planning architecture |
+| **DEVELOPER_GUIDE.md**       | How to use patterns  | Learning patterns     |
+| **REFACTORING_SUMMARY.md**   | What changed         | Onboarding            |
+| **REFACTORING_INDEX.md**     | Overview             | Quick overview        |
+| **ARCHITECTURE_DIAGRAMS.md** | Visual reference     | Understanding flow    |
+| **CHEATSHEET.md**            | Quick reference      | While coding          |
 
 ---
 
 ## Quick Checklist
 
 ### Before Committing Code
+
 - [ ] No hardcoded values
 - [ ] Uses constants for configuration
 - [ ] Proper type definitions
@@ -435,6 +468,7 @@ cd src/types                # Type definitions
 - [ ] No TypeScript errors
 
 ### When Adding Features
+
 - [ ] Identify component vs hook vs service
 - [ ] Create in appropriate folder
 - [ ] Add types in types/index.ts
@@ -449,17 +483,17 @@ cd src/types                # Type definitions
 
 ## Abbreviations
 
-| Abbr | Meaning |
-|------|---------|
-| **SRP** | Single Responsibility Principle |
-| **DRY** | Don't Repeat Yourself |
-| **UI** | User Interface |
-| **API** | Application Programming Interface |
-| **JSX** | JavaScript XML |
-| **TS** | TypeScript |
-| **FC** | Functional Component |
-| **Props** | Properties |
-| **Hook** | React Hook |
+| Abbr      | Meaning                           |
+| --------- | --------------------------------- |
+| **SRP**   | Single Responsibility Principle   |
+| **DRY**   | Don't Repeat Yourself             |
+| **UI**    | User Interface                    |
+| **API**   | Application Programming Interface |
+| **JSX**   | JavaScript XML                    |
+| **TS**    | TypeScript                        |
+| **FC**    | Functional Component              |
+| **Props** | Properties                        |
+| **Hook**  | React Hook                        |
 
 ---
 
@@ -497,14 +531,14 @@ If files are larger, consider splitting further!
 
 ## Troubleshooting
 
-| Problem | Solution |
-|---------|----------|
-| Can't find module | Use barrel export, check path |
-| Type error | Check types/index.ts, verify import |
-| Component not showing | Check CSS, z-index, display |
-| Hook not working | Check dependencies array |
-| State not updating | Check setState is correct |
-| Styling wrong | Check Tailwind classes |
+| Problem               | Solution                            |
+| --------------------- | ----------------------------------- |
+| Can't find module     | Use barrel export, check path       |
+| Type error            | Check types/index.ts, verify import |
+| Component not showing | Check CSS, z-index, display         |
+| Hook not working      | Check dependencies array            |
+| State not updating    | Check setState is correct           |
+| Styling wrong         | Check Tailwind classes              |
 
 ---
 
@@ -524,7 +558,7 @@ interface MyComponentProps {
 // 3. Create component
 export const MyComponent: React.FC<MyComponentProps> = ({ title }) => {
   const { isScrolled } = useScroll();
-  
+
   return (
     <div>
       <h1>{title}</h1>
