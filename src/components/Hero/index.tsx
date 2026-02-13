@@ -1,6 +1,7 @@
 /**
  * Hero component (refactored)
  * Main hero section with composed subcomponents
+ * Mobile-first responsive design
  */
 
 import { HERO_CONFIG } from "@/constants/hero";
@@ -13,16 +14,19 @@ import { ScrollIndicator } from "./ScrollIndicator";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center overflow-hidden pt-20 sm:pt-24 lg:pt-32 px-4 sm:px-6"
+      aria-label="Hero section"
+    >
       <HeroBackground />
 
       {/* Content */}
-      <div className="container relative z-10 pt-28 pb-20">
-        <div className="max-w-3xl">
+      <div className="container relative z-10 max-w-5xl">
+        <div>
           <HeroBadge />
 
           {/* Headline */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-display font-bold text-foreground leading-[1.1] mb-8 animate-fade-in animation-delay-100">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-display font-bold text-foreground leading-[1.1] mb-6 sm:mb-8 lg:mb-10 animate-fade-in animation-delay-100 text-balance">
             {HERO_CONFIG.headline.split(" ").slice(0, 4).join(" ")}{" "}
             <span className="gradient-text-accent">
               {HERO_CONFIG.headline.split(" ").slice(4).join(" ")}
@@ -30,7 +34,7 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl animate-fade-in animation-delay-200 text-balance">
+          <p className="text-base sm:text-lg md:text-xl lg:text-xl text-muted-foreground leading-relaxed mb-8 sm:mb-10 lg:mb-12 max-w-2xl animate-fade-in animation-delay-200 text-balance">
             {HERO_CONFIG.subheadline}
           </p>
 

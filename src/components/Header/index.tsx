@@ -1,6 +1,7 @@
 /**
  * Header component (refactored)
  * Main header with composed subcomponents
+ * Mobile-responsive with skip link and proper ARIA labels
  */
 
 import { useScroll, useMobileMenu } from "@/hooks";
@@ -22,13 +23,15 @@ const Header = () => {
       </a>
 
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-top ${
           isScrolled
-            ? "bg-background/75 backdrop-blur-xl shadow-soft border-b border-border/60 py-3"
-            : "bg-background/20 backdrop-blur-md border-b border-border/20 py-5"
+            ? "bg-background/75 backdrop-blur-xl shadow-soft border-b border-border/60 py-2 sm:py-3"
+            : "bg-background/20 backdrop-blur-md border-b border-border/20 py-3 sm:py-5"
         }`}
+        role="banner"
+        aria-label="Main navigation"
       >
-        <div className="container flex items-center justify-between">
+        <div className="container flex items-center justify-between gap-2 sm:gap-4">
           <HeaderLogo />
           <HeaderNav />
           <HeaderCTA />

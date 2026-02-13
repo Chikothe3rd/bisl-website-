@@ -29,9 +29,34 @@ export default {
         display: ['Space Grotesk', 'Inter', 'sans-serif'],
       },
       fontSize: {
-        'display-lg': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display': ['3.75rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-sm': ['3rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        // Display sizes - for large headings
+        'display-lg': ['clamp(2.5rem, 10vw, 4.5rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display': ['clamp(2rem, 8vw, 3.75rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display-sm': ['clamp(1.75rem, 6vw, 3rem)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        // Heading sizes
+        'h1': ['clamp(1.75rem, 5vw, 2.5rem)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'h2': ['clamp(1.5rem, 4vw, 2.25rem)', { lineHeight: '1.3' }],
+        'h3': ['clamp(1.25rem, 3vw, 1.875rem)', { lineHeight: '1.3' }],
+        'h4': ['1.25rem', { lineHeight: '1.4' }],
+        // Body sizes
+        'body-lg': ['1.125rem', { lineHeight: '1.6' }],
+        'body': ['1rem', { lineHeight: '1.6' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.5' }],
+        'caption': ['0.75rem', { lineHeight: '1.4' }],
+      },
+      spacing: {
+        // Extended spacing scale for better rhythm
+        'xs': '0.5rem',
+        'sm': '1rem',
+        'md': '1.5rem',
+        'lg': '2rem',
+        'xl': '3rem',
+        '2xl': '4rem',
+        '3xl': '6rem',
+        '4xl': '8rem',
+        '5xl': '10rem',
+        'section': 'clamp(2rem, 8vw, 6rem)',
+        'section-sm': 'clamp(1.5rem, 5vw, 3rem)',
       },
       colors: {
         border: "hsl(var(--border))",
@@ -154,6 +179,16 @@ export default {
         "float": "float 5s ease-in-out infinite",
         "pulse-soft": "pulse-soft 2s ease-in-out infinite",
         "shimmer": "shimmer 2s linear infinite",
+      },
+      // Animation delay utilities
+      transitionDelay: {
+        "0": "0ms",
+        "50": "50ms",
+        "100": "100ms",
+        "150": "150ms",
+        "200": "200ms",
+        "300": "300ms",
+        "500": "500ms",
       },
     },
   },

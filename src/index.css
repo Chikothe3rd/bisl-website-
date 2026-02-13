@@ -133,7 +133,7 @@
 
   /* Premium card */
   .card-premium {
-    @apply bg-card rounded-2xl border border-border/50 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_32px_-4px_rgba(0,0,0,0.12)] transition-all duration-500;
+    @apply bg-card rounded-2xl border border-border/50 shadow-soft hover:shadow-medium transition-all duration-300;
   }
 
   /* Gradient text */
@@ -158,14 +158,64 @@
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
-  /* Section padding */
+  /* Section padding - responsive */
   .section-padding {
-    @apply py-24 lg:py-32;
+    @apply py-12 sm:py-16 md:py-20 lg:py-28 xl:py-32;
+  }
+
+  .section-padding-sm {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
   }
 
   /* Container max width for content */
   .content-width {
     @apply max-w-3xl mx-auto;
+  }
+
+  /* Loading skeleton */
+  .skeleton {
+    @apply animate-shimmer bg-gradient-to-r from-muted via-muted-foreground/10 to-muted bg-[length:200%_100%];
+  }
+
+  /* Button states */
+  .btn-loading {
+    @apply pointer-events-none opacity-70;
+  }
+
+  /* Error styling */
+  .error-text {
+    @apply text-destructive text-sm font-medium;
+  }
+
+  .error-border {
+    @apply border-destructive/50;
+  }
+
+  /* Success styling */
+  .success-text {
+    @apply text-success text-sm font-medium;
+  }
+
+  .success-border {
+    @apply border-success/50;
+  }
+
+  /* Responsive grid helpers */
+  .grid-auto-fit {
+    @apply grid gap-4 sm:gap-6 auto-cols-fr;
+  }
+
+  /* Visually hidden but accessible to screen readers */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 }
 
@@ -177,6 +227,11 @@
   .animation-delay-400 { animation-delay: 400ms; }
   .animation-delay-500 { animation-delay: 500ms; }
   .animation-delay-600 { animation-delay: 600ms; }
+
+  /* Transition delays */
+  .transition-delay-100 { transition-delay: 100ms; }
+  .transition-delay-200 { transition-delay: 200ms; }
+  .transition-delay-300 { transition-delay: 300ms; }
 
   /* Text balance for better typography */
   .text-balance {
@@ -190,4 +245,38 @@
       text-wrap: balance;
     }
   }
+
+  /* Responsive text sizing */
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+  }
+
+  /* Touch-friendly sizing */
+  .touch-target {
+    @apply min-h-12 min-w-12;
+  }
+
+  /* Safe area utilities for mobile notches */
+  .safe-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  /* Smooth scrolling */
+  .scroll-smooth-behavior {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent FOUC (Flash of Unstyled Content) */
+  .prevent-fouc {
+    visibility: hidden;
+  }
+
+  .prevent-fouc.loaded {
+    visibility: visible;
+  }
 }
+
