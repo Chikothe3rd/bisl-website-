@@ -15,7 +15,7 @@ export const HERO_FEATURES: Feature[] = [
 export const HERO_CONFIG: HeroConfig = {
   badge: {
     icon: "pulse",
-    text: "Trusted Since 2014 • 500+ Projects Delivered",
+    text: "Trusted Since 2016 • 100+ Projects Delivered",
   },
   headline: "Transform Your Business With Intelligent IT Solutions",
   subheadline:
