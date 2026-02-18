@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/ui/loading-spinner";
+import { CONTACT_INFO } from "@/constants/navigation";
 import { 
   MapPin, 
   Phone, 
@@ -99,17 +100,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Plot 123, Cairo Road", "Lusaka, Zambia"],
+      details: [CONTACT_INFO.address],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+260 211 123 456", "+260 977 123 456"],
+      details: [CONTACT_INFO.phone],
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@bisl.co.zm", "support@bisl.co.zm"],
+      details: [CONTACT_INFO.email],
     },
     {
       icon: Clock,
@@ -134,10 +135,10 @@ const Contact = () => {
             <span className="w-8 h-px bg-accent" />
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-6">
-            Let's Build Something Great Together
+            Let's Talk
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Ready to transform your business with innovative IT solutions? Get in touch with our team for a free consultation.
+            Have a project in mind? Reach out to our team. We'll discuss what you need and show you what's possible.
           </p>
         </div>
 
