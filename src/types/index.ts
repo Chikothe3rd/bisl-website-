@@ -8,6 +8,7 @@ export interface NavLink {
 }
 
 export interface Feature {
+  icon: any;
   text: string;
 }
 
