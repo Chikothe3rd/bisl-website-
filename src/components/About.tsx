@@ -28,13 +28,13 @@ const About = () => {
               About Us
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-8">
-              Powering Zambian Innovation Since 2014
+              Powering Zambian Innovation Since 20166
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Broad Image Solutions Limited (BISL) is a Zambian technology company providing innovative, cost-effective IT solutions. We specialize in infrastructure, security, communications, and intelligent analytics.
+              Broad Image Solutions Limited (BISL) is a Zambian technology company providing innovative, cost-effective IT solutions. We specialize in infrastructure, security, communications and intelligent analytics.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Our expert team delivers tailored technology solutions that help organizations in education, healthcare, finance, and government achieve their digital transformation goals.
+              Our expert team delivers tailored technology solutions that help organizations in education, healthcare, finance and government achieve their digital transformation goals.
             </p>
 
             {/* Highlights */}
