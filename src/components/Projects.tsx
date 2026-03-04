@@ -43,10 +43,10 @@ const Projects = () => {
             <span className="w-8 h-px bg-accent" />
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-display-sm font-bold text-foreground mb-6">
-            Projects That Make an Impact
+            Recent Projects
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Explore how we've helped organizations across Zambia transform their operations with innovative, tailored technology solutions.
+            From universities to hospitals to banks - here's what we've built for Zambia's leading organizations.
           </p>
         </div>
 

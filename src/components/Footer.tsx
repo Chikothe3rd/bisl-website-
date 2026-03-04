@@ -20,6 +20,8 @@ const Footer = () => {
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      // Send email to danny.phiri@broadimagessolutions.com
+      window.location.href = `mailto:danny.phiri@broadimagessolutions.com?subject=Newsletter Subscription&body=Email: ${email}`;
       setIsSubscribed(true);
       setEmail("");
       setTimeout(() => setIsSubscribed(false), 3000);

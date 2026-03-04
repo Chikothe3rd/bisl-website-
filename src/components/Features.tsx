@@ -11,32 +11,32 @@ const features = [
   {
     icon: Shield,
     title: "Enterprise Security",
-    description: "Industry-leading security protocols protect your data and infrastructure from evolving threats.",
+    description: "Your data stays secure. We monitor 24/7 so you don't have to worry.",
   },
   {
     icon: Clock,
     title: "Fast Deployment",
-    description: "Rapid implementation with minimal disruption to your day-to-day operations.",
+    description: "We get it installed quickly and efficiently, with minimal disruption to your business.",
   },
   {
     icon: Users,
     title: "Expert Team",
-    description: "Certified professionals with deep expertise across all technology domains.",
+    description: "Our engineers have worked on projects across every sector in Zambia.",
   },
   {
     icon: HeadphonesIcon,
     title: "24/7 Support",
-    description: "Round-the-clock technical support to keep your systems running smoothly.",
+    description: "Something breaks at 3 AM? We're awake. We fix it fast.",
   },
   {
     icon: Award,
     title: "Quality Assured",
-    description: "Rigorous testing and quality control for every project we deliver.",
+    description: "We test everything thoroughly before it goes live. No surprises.",
   },
   {
     icon: Zap,
     title: "Scalable Solutions",
-    description: "Future-proof technology that grows seamlessly with your business needs.",
+    description: "Your technology grows with your business. Future-proof from day one.",
   },
 ];
 
@@ -65,7 +65,7 @@ const Features = () => {
             The BISL Advantage
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            We combine technical excellence with exceptional service to deliver results that consistently exceed expectations.
+            Over a decade of experience. Hundreds of successful projects. We know what works.
           </p>
         </div>
 

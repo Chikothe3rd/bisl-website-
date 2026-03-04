@@ -6,7 +6,7 @@
 
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
-import { NAV_LINKS } from "@/constants/navigation";
+import { NAV_LINKS, CONTACT_INFO } from "@/constants/navigation";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -70,13 +70,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, menuRef
               className="w-full rounded-lg font-semibold touch-target"
               asChild
             >
-              <NavLink
-                to="/contact.html"
-                onClick={onClose}
-                className="flex items-center justify-center"
-              >
+              <a href="tel:+260976219920" aria-label="Get a quote from BISL">
                 Get a Quote
-              </NavLink>
+              </a>
             </Button>
           </div>
 
@@ -86,10 +82,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, menuRef
               Quick Contact
             </p>
             <a
-              href="tel:+260211123456"
+              href={`tel:${CONTACT_INFO.phone}`}
               className="text-sm font-medium text-foreground hover:text-accent transition-colors"
             >
-              +260 211 123 456
+              {CONTACT_INFO.phone}
             </a>
           </div>
         </nav>
