@@ -169,9 +169,9 @@ const Contact = () => {
               <h3 className="font-display font-semibold text-lg mb-2">Need urgent support?</h3>
               <p className="text-primary-foreground/70 text-sm mb-4">Our team is available 24/7 for critical issues.</p>
               <a 
-                href="tel:+260977123456" 
+                href="tel:+260976219920" 
                 className="inline-flex items-center gap-2 text-accent font-semibold text-sm group hover:opacity-80 transition-opacity focus-ring"
-                aria-label="Call us at +260 977 123 456"
+                aria-label="Call us at +260976219920"
               >
                 Call Now
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
@@ -363,7 +363,12 @@ const Contact = () => {
                 disabled={isSubmitting}
                 aria-label={isSubmitting ? "Sending message" : "Send message"}
                 onClick={() => {
-                  window.location.href = `mailto:danny.phiri@broadimagessolutions.com?subject=Contact Form Submission&body=${formData.message}`;
+                  // Send email to danny.phiri@broadimagessolutions.com
+                  window.location.href = `mailto:danny.phiri@broadimagessolutions.com?subject=Contact Form Submission&body=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ACompany: ${formData.company}%0AService: ${formData.service}%0A%0AMessage:%0A${formData.message}`;
+                  // Also trigger a get quote phone call
+                  setTimeout(() => {
+                    window.location.href = 'tel:+260976219920';
+                  }, 1000);
                 }}
               >
                 {isSubmitting ? (

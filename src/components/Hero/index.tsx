@@ -68,7 +68,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="rounded-full px-8 border-2 border-white text-white hover:bg-white/10 font-semibold backdrop-blur-sm transition-all duration-300"
+              className="rounded-full px-8 border-2 border-white text-white bg-transparent hover:bg-white/20 font-semibold backdrop-blur-sm transition-all duration-300"
               asChild
             >
               <a href="#services">Explore Services</a>

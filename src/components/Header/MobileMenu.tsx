@@ -70,13 +70,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, menuRef
               className="w-full rounded-lg font-semibold touch-target"
               asChild
             >
-              <NavLink
-                to="/contact.html"
-                onClick={onClose}
-                className="flex items-center justify-center"
-              >
+              <a href="tel:+260976219920" aria-label="Get a quote from BISL">
                 Get a Quote
-              </NavLink>
+              </a>
             </Button>
           </div>
 

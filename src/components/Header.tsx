@@ -76,7 +76,7 @@ const Header = () => {
               +260976219920
             </a>
             <Button variant="cta" size="default" className="rounded-full px-6" asChild>
-              <NavLink to="/contact.html">Get a Quote</NavLink>
+              <a href="tel:+260976219920">Get a Quote</a>
             </Button>
           </div>
 
@@ -119,9 +119,9 @@ const Header = () => {
             ))}
             <div className="pt-4 mt-2 border-t border-border">
               <Button variant="cta" size="lg" className="w-full rounded-2xl" asChild>
-                <NavLink to="/contact.html" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="tel:+260976219920" onClick={() => setIsMobileMenuOpen(false)}>
                   Get a Quote
-                </NavLink>
+                </a>
               </Button>
             </div>
           </nav>

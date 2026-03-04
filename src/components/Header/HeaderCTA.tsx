@@ -25,7 +25,7 @@ export const HeaderCTA: React.FC = () => {
         className="rounded-full px-6 touch-target font-semibold"
         asChild
       >
-        <NavLink to="/contact.html" aria-label="Get a quote from BISL">Get a Quote</NavLink>
+        <a href="tel:+260976219920" aria-label="Get a quote from BISL">Get a Quote</a>
       </Button>
     </div>
   );
