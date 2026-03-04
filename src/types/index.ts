@@ -8,7 +8,6 @@ export interface NavLink {
 }
 
 export interface Feature {
-  icon: React.ComponentType<{ className?: string }>;
   text: string;
 }
 

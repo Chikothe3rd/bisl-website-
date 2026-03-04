@@ -34,8 +34,8 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-background/75 backdrop-blur-xl shadow-soft border-b border-border/60 py-3"
-            : "bg-background/20 backdrop-blur-md border-b border-border/20 py-5"
+            ? "bg-blue-600/95 backdrop-blur-xl shadow-lg border-b border-blue-500 py-3"
+            : "bg-blue-500/80 backdrop-blur-md border-b border-blue-400 py-5"
         }`}
       >
         <div className="container flex items-center justify-between">
@@ -50,8 +50,8 @@ const Header = () => {
               className="w-11 h-11 object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg text-foreground leading-none">BISL</span>
-              <span className="text-[10px] text-muted-foreground font-medium tracking-wider uppercase">Solutions</span>
+              <span className="font-display font-bold text-lg text-white leading-none">BISL</span>
+              <span className="text-[10px] text-white/70 font-medium tracking-wider uppercase">Solutions</span>
             </div>
           </NavLink>
 
@@ -61,21 +61,29 @@ const Header = () => {
               <NavLink
                 key={link.to}
                 to={link.to}
-                className="relative px-5 py-2.5 text-foreground/70 hover:text-foreground font-medium transition-all rounded-full hover:bg-muted/60 hover:shadow-soft focus-ring group"
-                activeClassName="text-foreground bg-muted/60 shadow-soft"
+                className="relative px-5 py-2.5 text-white/90 hover:text-white font-medium transition-all duration-300 rounded-full hover:bg-white/20 hover:shadow-lg focus-ring group"
+                activeClassName="text-white bg-white/25 shadow-lg"
               >
                 {link.label}
-                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300" />
               </NavLink>
             ))}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+260976219920" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="tel:+260976219920" 
+              className="text-sm font-semibold text-white hover:text-white/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-1 group"
+            >
+              <span className="group-hover:drop-shadow-lg transition-all">📞</span>
               +260976219920
             </a>
-            <Button variant="cta" size="default" className="rounded-full px-6" asChild>
+            <Button 
+              size="default" 
+              className="rounded-full px-6 bg-white text-blue-600 hover:bg-white hover:text-blue-700 font-semibold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
+              asChild
+            >
               <a href="tel:+260976219920">Get a Quote</a>
             </Button>
           </div>
@@ -83,22 +91,22 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="lg:hidden p-2.5 rounded-xl bg-muted/50 hover:bg-muted focus-ring"
+            className="lg:hidden p-2.5 rounded-xl bg-white/20 hover:bg-white/30 focus-ring transition-all duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen ? "true" : "false"}
           >
             {isMobileMenuOpen ? (
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 text-white" />
             ) : (
-              <Menu className="w-5 h-5" />
+              <Menu className="w-5 h-5 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-full left-0 right-0 bg-background/92 backdrop-blur-xl border-b border-border shadow-large transition-all duration-300 ${
+          className={`lg:hidden absolute top-full left-0 right-0 bg-blue-600/95 backdrop-blur-xl border-b border-blue-500 shadow-lg transition-all duration-300 ${
             isMobileMenuOpen
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-4 pointer-events-none"
@@ -109,16 +117,16 @@ const Header = () => {
               <NavLink
                 key={link.to}
                 to={link.to}
-                className="px-5 py-4 text-foreground/80 hover:text-foreground font-medium transition-all rounded-2xl hover:bg-muted/60 focus-ring text-lg"
-                activeClassName="text-foreground bg-muted/60"
+                className="px-5 py-4 text-white/90 hover:text-white font-medium transition-all duration-300 rounded-2xl hover:bg-white/20 hover:scale-105 active:scale-95 focus-ring text-lg"
+                activeClassName="text-white bg-white/25"
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {link.label}
               </NavLink>
             ))}
-            <div className="pt-4 mt-2 border-t border-border">
-              <Button variant="cta" size="lg" className="w-full rounded-2xl" asChild>
+            <div className="pt-4 mt-2 border-t border-white/20">
+              <Button size="lg" className="w-full rounded-2xl bg-white text-blue-600 hover:bg-white hover:text-blue-700 font-semibold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300" asChild>
                 <a href="tel:+260976219920" onClick={() => setIsMobileMenuOpen(false)}>
                   Get a Quote
                 </a>
