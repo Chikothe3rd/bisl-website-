@@ -324,8 +324,8 @@ const Contact = () => {
                     <option value="pbx">IP PBX Systems</option>
                     <option value="power">Backup Power Solutions</option>
                     <option value="bi">Business Intelligence</option>
-                    <option value="analytics">Predictive Analytics</option>
-                    <option value="other">Other / Multiple Services</option>
+                    <option value="equipment">IT Equipment</option>
+                    <option value="other">Other IT / Multiple Services</option>
                   </select>
                 </div>
 
