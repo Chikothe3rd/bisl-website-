@@ -1,51 +1,98 @@
 /**
- * Hero component (refactored)
- * Main hero section with composed subcomponents
- * Mobile-first responsive design
+ * Hero component
+ * Clean, simple, responsive landing page hero section
  */
 
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { HERO_CONFIG } from "@/constants/hero";
-import { HeroBackground } from "./HeroBackground";
-import { HeroBadge } from "./HeroBadge";
-import { HeroCTA } from "./HeroCTA";
-import { HeroFeatures } from "./HeroFeatures";
-import { HeroStats } from "./HeroStats";
-import { ScrollIndicator } from "./ScrollIndicator";
 
 const Hero = () => {
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 lg:pt-32 px-4 sm:px-6 bg-gradient-to-b from-blue-900 to-blue-600 text-white"
+      className="relative min-h-screen flex items-center justify-center bg-white py-20 px-4 sm:px-6 lg:px-8"
       aria-label="Hero section"
     >
-      <HeroBackground />
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
 
       {/* Content */}
-      <div className="container relative z-10 max-w-5xl">
-        <div className="text-center sm:text-left">
-          <HeroBadge />
+      <div className="w-full max-w-5xl">
+        <div className="text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-8">
+            <span className="w-2 h-2 rounded-full bg-blue-500" aria-hidden="true" />
+            {HERO_CONFIG.badge.text}
+          </div>
 
-          {/* Headline - Improved alignment and responsiveness */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 sm:mb-8 lg:mb-10 animate-fade-in animation-delay-100">
-            {HERO_CONFIG.headline.split(" ").slice(0, 4).join(" ")} {" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-500">
-              {HERO_CONFIG.headline.split(" ").slice(4).join(" ")}
-            </span>
+          {/* Main Headline - Blue Text */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-blue-900 leading-tight mb-6 tracking-tight">
+            {HERO_CONFIG.headline}
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto sm:mx-0 animate-fade-in animation-delay-200">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed mb-10 max-w-3xl mx-auto">
             {HERO_CONFIG.subheadline}
           </p>
 
-          <HeroCTA />
-          <HeroFeatures features={HERO_CONFIG.features} />
-        </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Button 
+              variant="default" 
+              size="lg"
+              className="rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+              asChild
+            >
+              <a href="#contact" className="flex items-center gap-2">
+                Get Started
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              </a>
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="rounded-full px-8 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold"
+              asChild
+            >
+              <a href="#services">Explore Services</a>
+            </Button>
+          </div>
 
-        <HeroStats />
+          {/* Feature Badges */}
+          <div className="flex flex-wrap gap-3 justify-center mb-12">
+            {HERO_CONFIG.features.map((feature, idx) => (
+              <div key={idx} className="flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-lg border border-blue-200">
+                <feature.icon className="w-4 h-4 text-blue-600" aria-hidden="true" />
+                <span className="text-sm font-medium text-blue-900">{feature.text}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 pt-8 border-t border-gray-200">
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600">100+</div>
+              <p className="text-sm md:text-base text-gray-600 mt-1">Enterprise Clients</p>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600">10+</div>
+              <p className="text-sm md:text-base text-gray-600 mt-1">Years Experience</p>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600">99.9%</div>
+              <p className="text-sm md:text-base text-gray-600 mt-1">Uptime</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <ScrollIndicator />
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden lg:flex flex-col items-center gap-2">
+        <span className="text-xs text-gray-400 font-medium">Scroll to explore</span>
+        <div className="w-6 h-10 border-2 border-blue-300 rounded-full flex items-center justify-center">
+          <div className="w-1 h-2 bg-blue-400 rounded-full animate-pulse" />
+        </div>
+      </div>
     </section>
   );
 };
