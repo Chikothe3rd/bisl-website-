@@ -74,9 +74,8 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-4">
             <a 
               href="tel:+260976219920" 
-              className="text-sm font-semibold text-white hover:text-white/80 transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-1 group"
+              className="text-sm font-semibold text-white hover:text-white/80 transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              <span className="group-hover:drop-shadow-lg transition-all">📞</span>
               +260976219920
             </a>
             <Button 

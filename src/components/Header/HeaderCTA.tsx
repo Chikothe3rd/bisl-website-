@@ -13,10 +13,9 @@ export const HeaderCTA: React.FC = () => {
     <div className="hidden lg:flex items-center gap-4">
       <a
         href={`tel:+260976219920`}
-        className="hidden md:flex items-center gap-2 text-sm font-semibold text-white hover:text-white/80 transition-all duration-300 hover:scale-105 active:scale-95 focus-ring rounded-lg px-3 py-2 group"
+        className="hidden md:flex items-center gap-2 text-sm font-semibold text-white hover:text-white/80 transition-all duration-300 hover:scale-105 active:scale-95 focus-ring rounded-lg px-3 py-2"
         aria-label="Call us at +260976219920"
       >
-        <span className="text-base group-hover:drop-shadow-lg transition-all">📞</span>
         <span>+260976219920</span>
       </a>
       <Button 
