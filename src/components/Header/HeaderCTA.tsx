@@ -12,12 +12,12 @@ export const HeaderCTA: React.FC = () => {
   return (
     <div className="hidden lg:flex items-center gap-3 xl:gap-4">
       <a
-        href={`tel:${CONTACT_INFO.phone.replace(/\s/g, "")}`}
+        href={`tel:+260976219920`}
         className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors focus-ring rounded-lg px-3 py-2"
-        aria-label={`Call us at ${CONTACT_INFO.phone}`}
+        aria-label="Call us at +260976219920"
       >
         <Phone className="w-4 h-4" aria-hidden="true" />
-        <span>{CONTACT_INFO.phone}</span>
+        <span>+260976219920</span>
       </a>
       <Button 
         variant="cta" 

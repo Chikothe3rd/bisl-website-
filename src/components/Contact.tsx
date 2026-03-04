@@ -362,6 +362,9 @@ const Contact = () => {
                 className="w-full rounded-xl h-14 touch-target font-semibold"
                 disabled={isSubmitting}
                 aria-label={isSubmitting ? "Sending message" : "Send message"}
+                onClick={() => {
+                  window.location.href = `mailto:danny.phiri@broadimagessolutions.com?subject=Contact Form Submission&body=${formData.message}`;
+                }}
               >
                 {isSubmitting ? (
                   <>
@@ -383,7 +386,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
